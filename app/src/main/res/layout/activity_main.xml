@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--头部-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPale">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:text="@string/main_name"/>
+        <!--android:layout_alignParentRight="true"在父类的右边-->
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="85dp"
+                android:src="@drawable/location" />
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="75dp"
+                android:textStyle="bold"
+                android:layout_marginTop="27dp"/>
+
+        <ImageView
+            android:id="@+id/img_seek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="260dp"
+            android:src="@drawable/seek" />
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/add" />
+  </RelativeLayout>
+    <!--中部内容区-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp">
+        </RelativeLayout>
+        <!--底部菜单-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--android:layout_alignParentBottom="true"在父类底部,
+         android:gravity="center_vertical"
+         限定它里面的内容要垂直居中显示,
+         android:baselineAligned="true",
+         允许用户调整它内容的基线 -->
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_tab"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@color/colorPale">
+
+            <RelativeLayout
+                android:id="@+id/rl_project"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <!--android:layout_centerHorizontal="true"
+                用于相对布局（RelativeLayout）的子控件居中-->
+                <ImageView
+                    android:id="@+id/iv_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                   android:src="@drawable/project" />
+
+                <TextView
+                    android:id="@+id/tv_project"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_project"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/main_project"
+                    android:textColor="@color/colorBrown"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/me" />
+
+                <TextView
+                    android:id="@+id/tv_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_me"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/main_me"
+                    android:textColor="@color/colorBrown"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/message" />
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_message"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/main_message"
+                    android:textColor="@color/colorBrown"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/iv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:id="@+id/tv_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_chat"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/main_chat"
+                    android:textColor="@color/colorBrown"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
